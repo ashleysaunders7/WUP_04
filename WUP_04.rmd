@@ -32,6 +32,7 @@ $H_a$ There is a significant difference in average score on the WORDSUM test bet
 
 ## Descriptive Results
 
+
 ### Graphical Descriptive Results
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
@@ -39,11 +40,16 @@ $H_a$ There is a significant difference in average score on the WORDSUM test bet
 boxplot(WORDSUM~DEGREE,data=GSScsv)
 ```
 
-This graph makes it clear that there is a significant difference between GRADUATE's and HIGHSCHOOL's third quartiles. We can say the same for JUNIOR COLLEGE's first quartile being higher than LT HIGHSCHOOL.
+This graph makes it clear that there is a significant difference between GRADUATE's and HIGHSCHOOL's WORDSUM. We can say the same for JUNIOR COLLEGE's being higher than LT HIGHSCHOOL WORDSUM.
 
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+```{r}
+favstats(WORDSUM~DEGREE,data=GSScsv)
+```
+
+Our Numerical Descriptive Results clearly show that GRADUATE has a Q1 of 10, while the Q3 of LT HIGH SCHOOL is 8.25 with the Q3 at HIGH SCHOOL is 9, regardless it has a high number of 85 people. This is significant because the number of people in HIGH SCHOOL is nearly the combined number of all the other DEGREEs, making it clear there is a significant difference between the values.
 
 ## Inferential Results
 
